@@ -4,11 +4,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Educational Resource Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
+    <!-- Navmenu -->
+    <nav class="navbar navbar-expand-lg border shadow-sm py-2 sticky-top">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand text-primary fw-bolder fs-3" href="#">EduHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-100 justify-content-center gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories-section">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resources" type="button" class="btn btn-primary rounded-1">Browse Library</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section - add id, "home" -->
+    <section class="container-fluid pb-5" id="home">
+
+        <!-- Introduction -->
+        <div class="container" id="introduction">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col text-center">
+                    <h1 class="fw-bolder fs-1">Empower Your Learning with Curated <span class="text-primary">Free <span class="text-primary-emphasis">Knowledge</span></span></h1>
+                    <p class="fs-4">
+                        Welcome to EduHub - a centralized, open repository designed for students, educators, and lifelong learners. Discover peer-reviewed guides, interactive tutorials, lecture notes, and textbook companions at zero cost.
+                    </p>
+                    <div>
+                        <a href="#categories" type="button" class="btn btn-primary rounded-3 py-2 px-3">
+                            Explore Categories
+                        </a>
+                        <a href="#featured" type="button" class="btn bg-white border border-1 border-secondary-subtle py-2 px-3">
+                            View Featured
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured -->
+        <div class="row px-4 mb-4" id="featured">
+            <div class="col border-bottom">
+                <p class="text-uppercase mb-1 text-primary small fw-semibold">hand-picked highlights</p>
+                <h1 class="font-bolder">Featured Resources of the Month</h1>
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 px-4 mb-5 pb-5 gy-3">
+
+            <div class="col">
+                <div class="card bg-white shadow-sm border-0">
+                    <div class="card-body">
+                        <p class="bg-primary-subtle px-3 py-1 rounded-2 text-primary-emphasis">STEM & Computer Science</p>
+                        <p class="fs-3 fw-bold">Interactive Python & Algorithmic Thinking</p>
+                        <p>A modular, hands-on syllabus designed for beginners and intermediate coders featuring real-time visual code execution and practice problem...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card bg-white shadow-sm border-0">
+                    <div class="card-body">
+                        <p class="bg-success-subtle px-3 py-1 rounded-2 text-success-emphasis">Mathematics</p>
+                        <p class="fs-3 fw-bold">Calculus & Linear Algebra Visual Companion</p>
+                        <p>Intuitive graphical breakdowns of multivariable limits, matrix transformations, and derivatives with step-by-step problem walkthroughs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card bg-white shadow-sm border-0">
+                    <div class="card-body">
+                        <p class="bg-warning-subtle px-3 py-1 rounded-2 text-warning-emphasis">Humanities</p>
+                        <p class="fs-3 fw-bold">Global History & Civilization Archive</p>
+                        <p>An extensive, primary-source indexed collection detailing historical inflection points, annotated treaties, and cultural evolutions across 6...</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Categories Section - add id, "categories-section" -->
+    <section class="container-fluid bg-white py-5 border shadow-sm" id="categories-section">
+        <div class="container">
+
+            <div class="row mb-5">
+                <div class="col text-center">
+                    <p class="text-uppercase text-primary fw-semibold mb-0 small" style="letter-spacing: 2px">browse curricula</p>
+                    <h1 class="fs-1">Discover By Category & Discipline</h1>
+                    <p class="fw-light fs-5">
+                        Easily filter through categorized syllabi, textbooks, laboratory exercises, and peer-reviewed material
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Categories -->
+        <div class="row row-cols-1 row-cols-md-6 gy-2 justify-content-center px-4 mb-5" id="categories">
+
+            <!-- Category Card -->
+            <div class="col">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Computer Science</h5>
+                        <p class="fw-light small">1,240 items</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Card -->
+            <div class="col">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Natural Sciences</h5>
+                        <p class="fw-light small">980 items</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Card -->
+            <div class="col">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Mathematics</h5>
+                        <p class="fw-light small">820 items</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Card -->
+            <div class="col">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Literature & Arts</h5>
+                        <p class="fw-light small">650 items</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Card -->
+            <div class="col">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="fw-bold">Social Studies</h5>
+                        <p class="fw-light small">540 items</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sample Resources -->
+        <div class="row row-cols-1 row-cols-md-3 px-4 mb-5 gy-3" id="resources">
+
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-title border-0 text-primary">
+                        Computer Science
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold">Data Structures & Big-O Reference Sheet</h5>
+                        <p class="fw-light">Quick visual summary of space and time complexities for arrays, trees, heaps, and graphs</p>
+                    </div>
+                    <div class="card-footer text-end bg-transparent border-secondary-subtle">
+                        <a href="#" class="text-primary text-decoration-none">See Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-title border-0 text-success">
+                        Natural Sciences
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold">Organic Chemistry Mechanism Handbook</h5>
+                        <p class="fw-light">Electrophilic substitutions, nucleophilic additions, and synthesis pathways simplified with color arrows.</p>
+                    </div>
+                    <div class="card-footer text-end bg-transparent border-secondary-subtle">
+                        <a href="#" class="text-primary text-decoration-none">See Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-title border-0" style="color: purple">
+                        Natural Sciences
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold">Organic Chemistry Mechanism Handbook</h5>
+                        <p class="fw-light">Electrophilic substitutions, nucleophilic additions, and synthesis pathways simplified with color arrows.</p>
+                    </div>
+                    <div class="card-footer text-end bg-transparent border-secondary-subtle">
+                        <a href="#" class="text-primary text-decoration-none">See Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-title border-0 text-danger">
+                        Social Studies
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold">Macroeconomics: Monetary & Fiscal Policy</h5>
+                        <p class="fw-light">Explanatory models illustrating inflation, interest rate mechanisms, and international balance of trade.</p>
+                    </div>
+                    <div class="card-footer text-end bg-transparent border-secondary-subtle">
+                        <a href="#" class="text-primary text-decoration-none">See Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-title border-0 text-info-emphasis">
+                        Engineering
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold">Circuit Analysis & Signal Processing Fundamentals</h5>
+                        <p class="fw-light">Kirchhoff's laws, Laplace transforms, and passive filter designs with circuit simulation files.</p>
+                    </div>
+                    <div class="card-footer text-end bg-transparent border-secondary-subtle">
+                        <a href="#" class="text-primary text-decoration-none">See Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card p-4">
+                    <div class="card-title border-0 text-warning-emphasis">
+                        Literature & Writing
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold">Academic Essay Construction & Citation Mastery</h5>
+                        <p class="fw-light">Standard citation styles (APA, MLA, Chicago), thesis drafting templates, and peer-review rubrics.</p>
+                    </div>
+                    <div class="card-footer text-end bg-transparent border-secondary-subtle">
+                        <a href="#" class="text-primary text-decoration-none">See Details</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- About Section - add id, "about" -->
+    <section class="container-fluid py-5" id="about">
+
+        <!-- Mission -->
+        <div class="row px-3 mb-5" id="mission">
+            <div class="col">
+                <div class="card bg-white border-0 shadow-sm p-4 rounded-4">
+                    <div class="card-body">
+
+                        <p class="text-uppercase text-primary fw-semibold small mb-2">our guiding purpose</p>
+                        <h1 class="fw-bold">Mission Statement</h1>
+                        <p class="fw-light">
+                            At EduHub, our mission is to break down socio-economic barriers to quality education by providing universally accessible, open-license learning materials. We believe every curious mind deserves unrestricted access to foundational knowledge, whether preparing for higher education, pursuing career advancement, or exploring personal curiosity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="row px-3 mb-5" id="contact">
+            <div class="col">
+                <div class="row border-0 shadow-sm p-4 rounded-4" style="background: rgb(7, 7, 39)">
+                    <!-- Text -->
+                    <div class="col">
+                        <div class="card bg-transparent border-0">
+                            <div class="card-body text-white">
+                                <p class='text-uppercase fw-semibold text-info small'>get in touch</p>
+                                <h3 class="fw-bold">Contact Information & Inquiries</h3>
+                                <p class='fw-light'>
+                                    Have curriculum recommendations, corrections, or partnership proposals? Reach out to our academic liaison team. We welcome submissions from educators worldwide.
+                                </p>
+                                <ul>
+                                    <li>
+                                        <p class='fw-light'>Email Inquiries</p>
+                                        <p class="fw-semibold">support@eduhub-learning.org</p>
+                                    </li>
+                                    <li>
+                                        <p class="fw-light">Resource Hotline</p>
+                                        <p class="fw-semibold">+1(800)555-EDU-HUB</p>
+                                    </li>
+                                    <li>
+                                        <p class="fw-light">Headquarters</p>
+                                        <p class="fw-semibold">450 University Way, Suite 100, Makati City</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact -->
+                    <div class="col text-white">
+                        <form class="rounded-3 p-4 py-4 border border-secondary-" style="background: rgb(54, 64, 97)">
+                            <p class='fw-bold fs-5'>Send a Quick Message</p>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" placeholder="Your name...">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="text" class="form-control" placeholder="email@institution.edu">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label class="form-label">Message</label>
+                                    <textarea class="form-control" rows="7" placeholder="Suggest a new learning material or ask a question..."></textarea>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-4 shadow-sm px-5">
+        <div class="row row-cols-1 row-cols-md-2 gy-4">
+            <div class="col text-center text-md-start">
+                <span class="fw-bold text-primary-emphasis">EduHub</span> - <span class="fw-light text-secondary">Universal Open Educational Resource Directory</span>
+            </div>
+            <div class="col">
+                <div class="d-flex flex-col flex-md-row gap-3 justify-content-center justify-content-md-end">
+                    <a href="#introduction" class='text-decoration-none'>Introduction</a>
+                    <a href="#categories" class='text-decoration-none'>Categories</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
 </html>

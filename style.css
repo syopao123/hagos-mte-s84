@@ -1,0 +1,34 @@
+body {
+    background: #EEF0FF;
+    font-family: 'Inter', 'sans-serif';
+}
+
+.headline {
+    font-family: 'Plus Jakarta Sans', 'sans-serif';
+}
+
+nav {
+    background: white !important;
+}
+
+.nav-link {
+    color: rgb(31, 31, 31) !important;
+}
+
+.nav-link:hover {
+    color: rgb(71, 71, 71) !important;
+}
+
+.card {
+    background: #f5f6fd;
+    height: 100%;
+    border: 1px solid rgb(216, 216, 216);
+}
+
+input, textarea {
+    background: rgb(14, 14, 26) !important;
+}
+
+input::placeholder, textarea::placeholder {
+    color: white !important;
+}
